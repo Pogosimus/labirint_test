@@ -437,6 +437,19 @@ body a {
     height: 115px;
     padding: 15px 20px;
   }
+  .container .delivery-methods .boxes .method-box-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 100%;
+  }
   .container .delivery-methods .boxes .method-box_option {
     font-size: 17px;
     line-height: 21.42px;
@@ -456,7 +469,7 @@ body a {
     white-space: nowrap;
     position: absolute;
     left: 65px;
-    top: 38px;
+    top: 36px;
   }
   .container .delivery-methods_choose-option {
     font-size: 17px;
