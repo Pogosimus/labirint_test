@@ -1,0 +1,750 @@
+@import url('http://fonts.cdnfonts.com/css/pt-root-ui');
+
+$primary-font-size: 22px;
+$primary-font-wight: 400;
+$primary-line-height: 27.72px;
+$headers-font-size: 29px;
+$headers-font-wight: 700;
+$headers-line-height: 36.54px;
+$border-1: 1px solid #c5c5c5;
+$border-2: 1px solid #d6d6d6;
+$border-3: 1px solid #8c8c8c;
+$border-focused: 2px solid #065cc2;
+$border-radius: 4px;
+$gap: 14px;
+$test-border: 1px solid red;
+$test-bg-color: red;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f2f2f2;
+  font-family: 'PT Root UI', sans-serif;
+  font-style: normal;
+  font-size: $primary-font-size;
+  font-weight: $primary-font-wight;
+  line-height: $primary-line-height;
+  letter-spacing: 0.13px;
+  color: #333;
+  height: 100%;
+
+  h2 {
+    font-size: $headers-font-size;
+    font-weight: $headers-font-wight;
+    line-height: $headers-line-height;
+  }
+
+  a {
+    text-decoration: none;
+    color: #065cc2;
+  }
+}
+
+// main {
+//   position: absolute;
+//   bottom: 120px;
+// }
+
+.main-header {
+  padding-left: 120px;
+  font-size: 35px;
+  font-weight: $headers-font-wight;
+  line-height: 44px;
+}
+
+.container {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 20px 80px 0;
+}
+
+.order-process {
+  // width: 100%;
+  padding: 40px 80px 50px 40px;
+  border-right: 1px solid #8c8c8c;
+
+  .process-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+
+    .header-btns {
+      button {
+        width: 40px;
+        height: 40px;
+        border: $border-2;
+        border-radius: $border-radius;
+        background: #fff;
+      }
+
+      i {
+        font-size: 22px;
+      }
+    }
+  }
+
+  .delivery-methods {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+    .boxes {
+      display: flex;
+      flex-direction: row;
+      gap: $gap;
+      margin-bottom: 14px;
+
+      .method-box {
+        cursor: pointer;
+        width: 490px;
+        height: 152px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: $border-2;
+        border-radius: $border-radius;
+
+        &-text {
+          width: 364px;
+        }
+      }
+
+      .focused {
+        border: $border-focused;
+      }
+
+      &-text {
+        width: 364px;
+      }
+    }
+  }
+}
+
+.delivery-dates {
+  display: flex;
+  gap: $gap;
+  align-items: center;
+  margin-bottom: 14px;
+
+  .date-option-box {
+    cursor: pointer;
+    height: 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: $border-2;
+    border-radius: $border-radius;
+    padding: 0 20px;
+  }
+
+  .focused {
+    border: $border-focused;
+  }
+
+  &_choose-option {
+    padding: 0 10px;
+  }
+}
+
+.delivery-notifications {
+  margin-bottom: 30px;
+
+  .notification-method {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &_checkbox {
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+.receiver {
+  .receiver-contacts {
+    display: flex;
+    gap: $gap;
+    height: 116px;
+
+    .receiver-contacts-name_select-wrapper,
+    .receiver-contacts-phone_select-wrapper {
+      height: 74px;
+      border: $border-2;
+      border-radius: $border-radius;
+      position: relative;
+
+      label {
+        position: absolute;
+        top: 8px;
+        left: 14px;
+        font-size: 17px;
+      }
+
+      select {
+        cursor: pointer;
+        position: absolute;
+        top: 34px;
+        left: 9px;
+        border: none;
+        font-size: $primary-font-size;
+        font-weight: $headers-font-wight;
+        font-family: 'PT Root UI', sans-serif;
+      }
+    }
+
+    &-name {
+      width: 572px;
+      display: flex;
+      flex-direction: column;
+      gap: $gap;
+
+      &_select-wrapper {
+        width: 572px;
+
+        select {
+          width: 540px;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+
+    &-phone {
+      width: 287px;
+      display: flex;
+      flex-direction: column;
+      gap: $gap;
+      position: relative;
+
+      &_select-wrapper {
+        width: 287px;
+
+        select {
+          width: 255px;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.order-summary {
+  width: 36% !important;
+  padding: 40px 85px 0 50px;
+
+  hr {
+    background: #d6d6d6;
+    border: none;
+    height: 1px;
+    margin-top: 6px;
+  }
+
+  &-heading {
+    display: inline-flex;
+    align-items: center;
+    font-size: $headers-font-size;
+    margin-bottom: 30px;
+  }
+
+  .order-totals {
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      margin-bottom: 14px;
+    }
+
+    .total-prices {
+      text-align: right;
+    }
+  }
+}
+
+.checkout {
+  position: fixed;
+  bottom: 0;
+  height: 120px;
+  width: 100vw;
+  background: #f8f8f8;
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    max-width: 1700px;
+    // width: inherit;
+  }
+
+  &_btn {
+    cursor: pointer;
+    width: 400px;
+    height: 80px;
+    background: linear-gradient(0deg, #ec0002, #ec0002),
+      linear-gradient(91.91deg, rgba(208, 38, 38, 0) 0%, #d02626 99.65%),
+      #ff0000;
+    border: 1px solid #e01d1d;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.12), 0px 3px 1px rgba(0, 0, 0, 0.04),
+      0px 2px 0px rgba(149, 135, 128, 0.4);
+    border-radius: 4px;
+    color: #fff;
+    margin: 20px;
+    font-size: 29px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  .sum-price {
+    width: 490px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 80px;
+
+    &_final-price {
+      font-size: 35px;
+      font-weight: 700;
+    }
+  }
+}
+
+@media only screen and (max-width: 1700px) {
+  .container {
+    display: block;
+
+    .order-process {
+      border: none;
+    }
+
+    .order-summary {
+      display: none;
+    }
+  }
+
+  .checkout {
+    // width: inherit;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  $primary-font-size: 17px;
+  $secondary-font-size: 14px;
+  $primary-line-height: 21.42px;
+  $secondary-line-height: 17.64px;
+  $gap: 8px;
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background: #3d84ff14;
+    border-radius: 20px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #091e4241;
+    border-radius: 20px;
+  }
+
+  body {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 120px;
+    h2 {
+      font-size: 21px;
+      line-height: 26.46px;
+    }
+  }
+  .main-header {
+    padding: 40px 0 16px 16px;
+    // padding-left: 15px;
+    font-size: 27px;
+    line-height: 32.4px;
+  }
+
+  .container {
+    // position: relative;
+    // margin-bottom: 220px;
+    display: block;
+    padding: 0 0 120px 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+
+    .order-process {
+      padding: 0 16px;
+    }
+
+    .header-btns {
+      display: none;
+    }
+
+    .delivery-methods {
+      margin-bottom: 0;
+
+      .boxes {
+        gap: $gap;
+        margin-bottom: 12px;
+
+        .method-box {
+          position: relative;
+          width: 300px;
+          height: 115px;
+          padding: 15px 20px;
+
+          &_option {
+            font-size: $primary-font-size;
+            line-height: $primary-line-height;
+
+            .option-dates {
+              font-size: $primary-font-size;
+              font-weight: $primary-font-wight;
+              line-height: $secondary-line-height;
+            }
+          }
+
+          &_adress {
+            font-size: $secondary-font-size;
+            line-height: $secondary-line-height;
+          }
+
+          &_price {
+            font-size: $primary-font-size;
+            line-height: $primary-line-height;
+            white-space: nowrap;
+            position: absolute;
+            left: 65px;
+            top: 38px;
+          }
+        }
+      }
+
+      &_choose-option {
+        font-size: $primary-font-size;
+        line-height: $primary-line-height;
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  .delivery-dates {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap;
+    margin-bottom: 24px;
+
+    &_choose-option {
+      font-size: $primary-font-size;
+      line-height: $primary-line-height;
+    }
+    // align-items: center;
+    // margin-bottom: 14px;
+
+    .date-option-box {
+      cursor: pointer;
+      height: 75px;
+      width: 117px;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+      // border: $border-2;
+      // border-radius: $border-radius;
+      padding: 16px 0;
+      align-items: center;
+
+      &_days {
+        font-size: $primary-font-size;
+        line-height: $primary-line-height;
+      }
+
+      &_time {
+        font-size: $secondary-font-size;
+        line-height: $secondary-line-height;
+      }
+
+      .days-period {
+        display: none;
+      }
+    }
+
+    .focused {
+      border: $border-focused;
+    }
+
+    &_choose-option {
+      padding: 0 10px;
+    }
+  }
+
+  .delivery-notifications {
+    // margin-bottom: 30px;
+
+    .notification-method {
+      // display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: $primary-font-size;
+      line-height: $primary-line-height;
+      margin-bottom: 15px;
+    }
+  }
+
+  .receiver {
+    h2 {
+      // display: block;
+      // width: 150px;
+      // margin: 0;
+      position: absolute;
+    }
+    .receiver-contacts {
+      flex-direction: column;
+      gap: $gap;
+      // height: 116px;
+
+      .receiver-contacts-name_select-wrapper,
+      .receiver-contacts-phone_select-wrapper {
+        height: 55px;
+        border: $test-border;
+        border-radius: $border-radius;
+        position: relative;
+
+        label {
+          position: absolute;
+          top: 4px;
+          left: 14px;
+          font-size: $secondary-font-size;
+        }
+
+        select {
+          cursor: pointer;
+          position: absolute;
+          top: 24px;
+          left: 9px;
+          border: none;
+          font-size: $primary-font-size;
+          font-weight: $headers-font-wight;
+          font-family: 'PT Root UI', sans-serif;
+
+          .patronimic {
+            display: none;
+          }
+        }
+      }
+
+      &-name {
+        width: 328px;
+        // display: flex;
+        // flex-direction: column;
+        gap: $gap;
+        font-size: $primary-font-size;
+        order: 1;
+
+        &_select-wrapper {
+          width: 328px;
+          order: 2;
+
+          select {
+            width: 300px;
+
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+
+        &_new-name {
+          order: 1;
+          align-self: flex-end;
+        }
+      }
+
+      &-phone {
+        width: 328px;
+        // display: flex;
+        flex-direction: row;
+        gap: $gap;
+        position: relative;
+        order: 2;
+
+        &_select-wrapper {
+          width: 240px;
+
+          select {
+            width: 185px;
+
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+
+        &_new-phone {
+          font-size: $primary-font-size;
+          align-self: flex-end;
+          padding-left: 16px;
+          // text-align: center;
+        }
+      }
+    }
+  }
+
+  .checkout {
+    // margin: 0;
+    // bottom: -40px;
+    // position: sticky;
+    // left: 110px;
+    // bottom: 100px;
+    // display: none;
+    // width: inherit;
+
+    &-wrapper {
+      padding: 0;
+      // width: 328px;
+      width: 100%;
+      padding: 0 16px;
+      height: 100%;
+      flex-direction: column-reverse;
+      justify-content: space-evenly;
+      // align-items: center;
+      // align-content: center;
+      // justify-content: center;
+      // align-items: center;
+    }
+
+    &_btn {
+      margin: 0;
+      padding: 0;
+      font-size: $primary-font-size;
+      height: 52px;
+      width: 100%;
+    }
+
+    .sum-price-wrapper {
+      width: 100%;
+      // align-self: flex-start;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      &_more-info {
+        width: fit-content;
+        height: 100%;
+        font-size: $secondary-font-size;
+        line-height: $secondary-line-height;
+      }
+    }
+
+    .sum-price {
+      width: fit-content;
+      // text-align: left;
+      // align-items: flex-start;
+      // align-content: flex-start;
+      justify-content: flex-start;
+      margin: 0;
+      flex-direction: row;
+    }
+
+    .sum-price > * {
+      font-size: $secondary-font-size;
+      line-height: $secondary-line-height;
+    }
+  }
+
+  .order-summary-popup {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    // padding: 0 16px;
+
+    &_heading {
+      // position: absolute;
+      display: inline-flex;
+      align-items: center;
+      font-size: 21px;
+      margin: 40px 0 20px;
+      padding: 0 16px;
+    }
+
+    .popup-totals {
+      display: flex;
+      justify-content: space-between;
+      font-size: $primary-font-size;
+      line-height: $primary-line-height;
+      padding: 0 16px;
+
+      &-prices {
+        text-align: right;
+        font-weight: 700;
+      }
+
+      p {
+        margin-bottom: 14px;
+      }
+    }
+
+    .popup-summary {
+      display: flex;
+      justify-content: space-between;
+      font-size: $primary-font-size;
+      line-height: $primary-line-height;
+      padding: 20px 0;
+      margin: 8px 16px 0;
+      border-top: $border-2;
+      border-bottom: $border-2;
+
+      &_price {
+        text-align: right;
+        font-weight: 700;
+      }
+    }
+
+    .popup-footer {
+      position: absolute;
+      bottom: 0;
+      height: 84px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 16px;
+      border-top: $border-2;
+
+      &_btn {
+        cursor: pointer;
+        width: 328px;
+        background: #fff;
+        height: 52px;
+        font-size: $primary-font-size;
+        line-height: $primary-line-height;
+        letter-spacing: 0.5px;
+        border: $border-2;
+        box-shadow: 0px 2px 0px 0px rgba(149, 135, 128, 0.4);
+
+        box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.04);
+
+        box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.12);
+      }
+    }
+  }
+}

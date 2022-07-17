@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <title>Labirint Test</title>
+  </head>
+  <body>
+    <main>
+      <h1 class="main-header">Оформление заказа</h1>
+      <div class="container">
+        <section class="order-process">
+          <div class="process-header">
+            <h2>Доставка</h2>
+            <div class="header-btns">
+              <button class="header-btns_arrow-left" disabled="true">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <button class="header-btns_arrow-right">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="delivery-methods">
+            <div class="boxes">
+              <div class="method-box focused" id="method-box-1">
+                <div class="method-box-text">
+                  <h4 class="method-box_option">
+                    Почта России, курьер &ndash;
+                    <span class="option-dates"> 24-26 сент.</span>
+                  </h4>
+                  <p class="method-box_adress">
+                    ул. Академика Королева, 73/3, Петропавловск- Камчатский,
+                    683000
+                  </p>
+                </div>
+                <p class="method-box_price">+367 &#8381;</p>
+              </div>
+              <div class="method-box" id="method-box-2">
+                <div class="method-box-text">
+                  <h4 class="method-box_option">
+                    Лабиринт, курьер &ndash;
+                    <span class="option-dates"> 25 сент.</span>
+                  </h4>
+                  <p class="method-box_adress">
+                    Можайское шоссе, д. 21, кв. 50, Москва, 121471
+                  </p>
+                </div>
+                <p class="method-box_price">0 &#8381;</p>
+              </div>
+            </div>
+            <a href="#" class="delivery-methods_choose-option"
+              >Выбрать новое место и способ</a
+            >
+          </div>
+          <div class="delivery-dates">
+            <div class="date-option-box focused" id="date-option-box-1">
+              <h4 class="date-option-box_days">
+                пн, 24 сен <span class="days-period"> &ndash; ср, 26 сен</span>
+              </h4>
+              <p class="date-option-box_time">10:00&ndash;19:00</p>
+            </div>
+            <div class="date-option-box" id="date-option-box-2">
+              <h4 class="date-option-box_days">
+                чт, 27 сен <span class="days-period"> &ndash; пт, 28 сен</span>
+              </h4>
+              <p class="date-option-box_time">10:00&ndash;19:00</p>
+            </div>
+            <a href="#" class="delivery-dates_choose-option"
+              >Другие дата и время</a
+            >
+          </div>
+          <div class="delivery-notifications">
+            <div class="notification-method">
+              <input
+                class="notification-method_checkbox"
+                type="checkbox"
+                name="order-status-msg"
+                id="order-status-msg"
+                checked
+              />
+              <label for="order-status-msg"
+                >Viber/СМС уведомления о статусе заказа</label
+              >
+            </div>
+            <div class="notification-method">
+              <input
+                class="notification-method_checkbox"
+                type="checkbox"
+                name="contactless"
+                id="contactless"
+                checked
+                disabled
+              />
+              <label for="contactless"
+                >Оставить у двери (бесконтактная доставка)</label
+              >
+            </div>
+          </div>
+          <div class="receiver">
+            <h2>Получатель</h2>
+            <div class="receiver-contacts">
+              <div class="receiver-contacts-name">
+                <div class="receiver-contacts-name_select-wrapper">
+                  <label>Имя и фамилия</label>
+                  <select name="name" id="receiver-name">
+                    <option>
+                      <span class="firstName">Вольфганг</span>
+                      <span class="lastName">Вениаминович</span>
+                      <span class="patronimic">Константинопольский</span>
+                    </option>
+                  </select>
+                </div>
+                <a href="#" class="receiver-contacts-name_new-name"
+                  >Новый получатель</a
+                >
+              </div>
+              <div class="receiver-contacts-phone">
+                <div class="receiver-contacts-phone_select-wrapper">
+                  <label>Контактный телефон</label>
+                  <select name="phone" id="receiver-phone">
+                    <option value="">+7 910 234-56-78</option>
+                  </select>
+                </div>
+                <a href="#" class="receiver-contacts-phone_new-phone"
+                  >Новый телефон</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="order-summary">
+          <span class="order-summary-heading"
+            ><h2>В заказе 4 товара &nbsp;</h2>
+            (2 кг)</span
+          >
+          <div class="order-totals">
+            <div class="total-names">
+              <p class="total-names_price">Цена товаров</p>
+              <p class="total-names_discounts">Все скидки</p>
+              <p class="total-names_prepay-discount">Скидки за предоплату</p>
+            </div>
+            <div class="total-prices">
+              <p class="total-prices_price">29 456 &#8381;</p>
+              <p class="total-prices_discounts">-7 732 &#8381;</p>
+              <p class="total-prices_prepay-discount">-3%</p>
+            </div>
+          </div>
+          <hr />
+        </section>
+      </div>
+    </main>
+    <footer class="checkout">
+      <div class="checkout-wrapper">
+        <button class="checkout_btn">Оформить и оплатить</button>
+        <div class="sum-price-wrapper">
+          <div class="sum-price">
+            <p class="sum-price_label">Итого к оплате на сайте:&nbsp;</p>
+            <div class="sum-price_final-price">21 072 &#8381;</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
